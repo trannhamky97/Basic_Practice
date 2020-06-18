@@ -1,9 +1,10 @@
 # Basic_Practice
-1. Viết 1 chương trình xuất ra màn hình console hình như bên dưới
+1. Viết 1 chương trình xuất ra màn hình console hình như bên dưới:
+
 *
 **
-***
-****
+*** 
+**** 
 *****
 ******
 
