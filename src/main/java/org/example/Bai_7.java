@@ -36,8 +36,31 @@ public class Bai_7 {
             }
         }
     }
+    //Bai 7.2: Viết 1 chương trình có chứa 1 hàm, hàm này cho phép truyền vào 1 mảng(chứa các số nguyên)
+    //và in ra tất cả những con số trong mảng mà số đó không phải là số nguyên tố.
+    public static void inMangKhongLaSNT(){
+        System.out.print("Nhap so phan tu cua mang: ");
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+        for(int i =0 ; i<n;i++){
+            System.out.print("Array["+i+"] = ");
+            arr[i] = sc.nextInt();
+        }
+        inMang(arr);
+        System.out.println();
+        //Kiem tra so nguyen to
+        System.out.println("Danh sach so khong phai la so nguyen to:");
+        Bai_6 nguyenTo = new Bai_6();
+        for(int i = 0; i<arr.length;i++){
+            if(!(nguyenTo.ktSNT(arr[i]))){
+                System.out.print(+arr[i]+" ");
+            }
+        }
+    }
 
     public static void main(String[] args) {
-        mangTangDan();
+        //mangTangDan();
+        inMangKhongLaSNT();
     }
 }
