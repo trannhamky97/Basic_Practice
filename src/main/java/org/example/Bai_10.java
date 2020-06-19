@@ -8,6 +8,32 @@ public class Bai_10 {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        System.out.print("Nhap so nguyen thu 1: ");
+        int a = sc.nextInt();
+        System.out.print("Nhap so nguyen thu 2: ");
+        int b = sc.nextInt();
+        System.out.print("Nhap phep toan (+,-,*,/): ");
+        char pt = sc.next().charAt(0);
 
+        switch (pt){
+            case '+':
+                System.out.println(a +" + "+b+" = "+(a+b));
+                break;
+            case '-':
+                System.out.println(a +" - "+b+" = "+(a-b));
+                break;
+            case '*':
+                System.out.println(a +" * "+b+" = "+(a*b));
+                break;
+            case '/':
+                if(b==0){
+                    System.out.println("So bi chia phai khac 0");
+                } else {
+                    System.out.println(a +" / "+b+" = "+((float)a/b));
+                }
+                break;
+            default:
+                System.out.println("Nhap phep tinh khong hop le. ");
+        }
     }
 }

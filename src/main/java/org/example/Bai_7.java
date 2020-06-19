@@ -41,6 +41,10 @@ public class Bai_7 {
     public static void inMangKhongLaSNT(){
         System.out.print("Nhap so phan tu cua mang: ");
         int n = sc.nextInt();
+        while (n <= 0) {
+            System.out.println("So phan tu phai duong. Nhap lai so phan tu cua mang");
+            n = sc.nextInt();
+        }
 
         int arr[] = new int[n];
         for(int i =0 ; i<n;i++){
