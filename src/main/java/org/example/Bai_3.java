@@ -9,6 +9,10 @@ public class Bai_3 {
         System.out.print("Nhap gia tri: ");
         String giaTri = sc.nextLine();
         System.out.println(giaTri);
+
+        //Chuyen cho bien gia tri chuoi tren thanh so nguyen
+        int so = Integer.parseInt(giaTri);
+        System.out.println(so);
     }
 
     public static void main(String[] args) {

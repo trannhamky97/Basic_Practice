@@ -25,13 +25,16 @@ public class Bai_7 {
             System.out.print(arr[i]+" ");
     }
     public static void sapXepTangDan (int[] arr){
-        int tmp = arr[0];
         for (int i = 0; i < arr.length - 1;i++){
             for (int j = i+1; j < arr.length;j++){
                 if (arr[i]>arr[j]){
-                    tmp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = tmp;
+//                    int tmp = arr[i];
+//                    arr[i] = arr[j];
+//                    arr[j] = tmp;
+                    // Hoan doi 2 so ko su dung bien tmp
+                    arr[i]=arr[i]+arr[j];
+                    arr[j]=arr[i]-arr[j];
+                    arr[i]=arr[i]-arr[j];
                 }
             }
         }
@@ -64,7 +67,7 @@ public class Bai_7 {
     }
 
     public static void main(String[] args) {
-        //mangTangDan();
-        inMangKhongLaSNT();
+        mangTangDan();
+        //inMangKhongLaSNT();
     }
 }

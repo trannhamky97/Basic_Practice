@@ -6,24 +6,33 @@ public class Bai_4 {
     //biết rằng a và b do người dùng nhập tùy ý từ màn hình console.
     static Scanner sc = new Scanner(System.in);
     public static void ptBac1(){
-        System.out.print("Nhap a: ");
-        int a = sc.nextInt();
-        System.out.print("Nhap b: ");
-        int b = sc.nextInt();
+//        System.out.print("Nhap a: ");
+//        int a = sc.nextInt();
+//        System.out.print("Nhap b: ");
+//        int b = sc.nextInt();
+        //Vui long nhap vao a,b:
+        System.out.print("Vui long nhap vao a,b: ");
+        String ab = sc.nextLine();
+        String [] arr = ab.split(","); //split nam trong class String
+        int a = Integer.parseInt(arr[0]);
+        int b = Integer.parseInt(arr[1]);
+
         System.out.println("Giai phuong trinh: "+a +"x + "+b +" = 0");
+        System.out.println(-(Float.parseFloat(arr[1]))/Integer.parseInt(arr[0]));
         /* Nếu a = 0 và b = 0: phương trình có vô số nghiệm.
         Nếu a = 0 và b <> 0: phương trình vô nghiệm.
         Nếu a <> 0: phương trình có nghiệm duy nhất x = -b/a. */
-        if (a == 0) {
-            if (b == 0) {
-                System.out.println("Phuong trinh co vo so nghiem");
-            } else {
-                System.out.println("Phuong trinh vo nghiem");
-            }
-        } else {
-            float nghiem = (float)-b/a;
-            System.out.println("Phuong trinh co nghiem duy nhat x = "+nghiem);
-        }
+//        if (a == 0) {
+//            if (b == 0) {
+//                System.out.println("Phuong trinh co vo so nghiem");
+//            } else {
+//                System.out.println("Phuong trinh vo nghiem");
+//            }
+//        } else {
+//            float nghiem = (float)-b/a;
+//
+//            System.out.println("Phuong trinh co nghiem duy nhat x = "+nghiem);
+//        }
     }
 
     public static void main(String[] args) {
