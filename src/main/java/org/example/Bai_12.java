@@ -66,5 +66,6 @@ public class Bai_12 {
             tong = dsHocVien[i].tongDoanhThu(tong, dsHocVien[i].soTienDangKy);
         }
         System.out.println("Tong doann thu :" +tong);
+        // ....
     }
 }
