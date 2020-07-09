@@ -1,4 +1,5 @@
 package org.example;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -18,6 +19,8 @@ public class Bai_12 {
             System.out.print("Moi nhap lai so luong hoc vien (so luong > 1): ");
             soLuongHocVien = sc.nextInt();
         }
+
+
         HocVien[] dsHocVien = new HocVien[soLuongHocVien];
         for(int i = 0; i<soLuongHocVien ; i++){
             System.out.println("Nhap thong tin hoc vien thu "+(i+1));
