@@ -1,17 +1,45 @@
 package org.example;
+
 import java.util.Scanner;
 
 public class HocVien {
-    String maHocVien;
-    String tenHocVien;
+    private String maHocVien;
+    private String tenHocVien;
+    private float diem;
     Integer soCMND;
     Integer soDT;
     String email;
     String ngayDangKy;
     Integer soTienDangKy;
 
-    public HocVien(){}
-    public HocVien(String maHocVien, String tenHocVien, Integer soCMND, Integer soDT, String email, String ngayDangKy, Integer soTienDangKy){
+    public String getMaHocVien() {
+        return maHocVien;
+    }
+
+    public void setMaHocVien(String maHocVien) {
+        this.maHocVien = maHocVien;
+    }
+
+    public String getTenHocVien() {
+        return tenHocVien;
+    }
+
+    public void setTenHocVien(String tenHocVien) {
+        this.tenHocVien = tenHocVien;
+    }
+
+    public float getDiem() {
+        return diem;
+    }
+
+    public void setDiem(float diem) {
+        this.diem = diem;
+    }
+
+    public HocVien() {
+    }
+
+    public HocVien(String maHocVien, String tenHocVien, Integer soCMND, Integer soDT, String email, String ngayDangKy, Integer soTienDangKy) {
         this.maHocVien = maHocVien;
         this.tenHocVien = tenHocVien;
         this.soCMND = soCMND;
@@ -21,12 +49,19 @@ public class HocVien {
         this.soTienDangKy = soTienDangKy;
     }
 
-    void nhapThongTinHocVien(){
+    void nhapThongTinHocVien() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap ma hoc vien: ");
         maHocVien = sc.nextLine();
         System.out.print("Nhap ten hoc vien: ");
         tenHocVien = sc.nextLine();
+        System.out.print("Nhap diem hoc vien: ");
+        diem = sc.nextFloat();
+        while (diem < 0.0f || diem > 10.0f) {
+            System.out.print("Diem nhap khong hop le. Moi nhap lai diem hoc vien: ");
+            diem = sc.nextFloat();
+        }
+        sc.nextLine();
 //        System.out.print("Nhap so CMND: ");
 //        soCMND = sc.nextInt();
 //        System.out.print("Nhap sdt: ");
@@ -51,9 +86,11 @@ public class HocVien {
 //        soTienDangKy = sc.nextInt();
         System.out.println();
     }
-    void hienThiThongTin(){
-        System.out.println("Ma hoc vien: " +maHocVien);
-        System.out.println("Ten hoc vien: " +tenHocVien);
+
+    void hienThiThongTin() {
+        System.out.println("Ma hoc vien: " + maHocVien);
+        System.out.println("Ten hoc vien: " + tenHocVien);
+        System.out.println("Diem cuoi ki: " + diem);
 //        System.out.println("So cmnd: " +soCMND);
 //        System.out.println("SDT: " +soDT);
 //        System.out.println("Email: " +email);
@@ -62,10 +99,9 @@ public class HocVien {
         System.out.println();
     }
 
-    int tongDoanhThu(int tong, int soTienDangKy){
+    int tongDoanhThu(int tong, int soTienDangKy) {
         return tong + soTienDangKy;
     }
-
 
 
 }
